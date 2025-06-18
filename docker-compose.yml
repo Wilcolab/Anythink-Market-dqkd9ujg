@@ -1,3 +1,4 @@
+version: '3'
 services:
   python-server:
     build:
@@ -7,6 +8,7 @@ services:
       - 8000:8000
     volumes:
       - ./python-server/src:/app/src
+    command: ["uvicorn", "src.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
 
   node-server:
     build:
@@ -16,3 +18,4 @@ services:
       - 8001:8001
     volumes:
       - ./node-server/src:/usr/src/app/src
+    command: ["yarn", "start"]
