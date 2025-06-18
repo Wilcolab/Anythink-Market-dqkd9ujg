@@ -63,7 +63,7 @@ To run the Node server using Docker:
 
   This will build the Docker image for the Node server and start the containers as defined in `docker-compose.yml`.
 
-- The Node server will be accessible at port `3000`.
+- The Node server will be accessible at port `8001`.
 
 ## API Routes
 
