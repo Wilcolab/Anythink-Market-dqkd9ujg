@@ -37,3 +37,37 @@ The FastAPI server provides the following API routes:
 - `POST /tasks`: Adds a task to the task list. The request body should contain the task details.
 
 - `GET /tasks`: Retrieves the task list.
+
+# Node Server
+
+This project also includes a Node.js server implemented with Express. It provides two routes for managing a task list.
+
+## Project Structure
+
+The Node server has the following files and directories:
+
+- `node-server/src/index.js`: Contains the Express server implementation with two routes for adding and retrieving tasks.
+- `node-server/src/__init__.js`: (Optional) Placeholder file if you want to mark the directory; not required in Node.js.
+- `node-server/package.json`: Lists the dependencies and scripts for the Node server.
+- `node-server/Dockerfile`: Used to build a Docker image for the Node server. It sets up the environment, installs dependencies, copies the source code, and specifies the start command.
+
+## Getting Started
+
+To run the Node server using Docker:
+
+- Build and start the Docker containers with:
+
+  ```shell
+  docker compose up
+  ```
+
+  This will build the Docker image for the Node server and start the containers as defined in `docker-compose.yml`.
+
+- The Node server will be accessible at port `3000`.
+
+## API Routes
+
+The Node server provides the following API routes:
+
+- `POST /tasks`: Adds a task to the task list. The request body should contain the task details.
+- `GET /tasks`: Retrieves the task list.
